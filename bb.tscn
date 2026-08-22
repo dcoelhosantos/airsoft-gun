@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://4aptx8l20dw8"]
+
+[ext_resource type="Script" uid="uid://c7d82ju6g3rge" path="res://bb.gd" id="1_515gt"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_xvoje"]
+radius = 0.08
+height = 0.16
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_lfvhd"]
+radius = 0.003
+
+[node name="BB" type="RigidBody3D" unique_id=812194326]
+mass = 0.001
+script = ExtResource("1_515gt")
+backspin_drag = 1.5
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1927578972]
+mesh = SubResource("SphereMesh_xvoje")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1406120322]
+shape = SubResource("SphereShape3D_lfvhd")

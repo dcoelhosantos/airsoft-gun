@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://d0oxn6jq1q13p"]
+
+[ext_resource type="Script" uid="uid://1ebkptlapnpv" path="res://arma.gd" id="1_6ba58"]
+[ext_resource type="PackedScene" uid="uid://4aptx8l20dw8" path="res://bb.tscn" id="2_lgngo"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_xwo6f"]
+
+[node name="Mundo" type="Node3D" unique_id=771013971]
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=54633187]
+transform = Transform3D(0.99998903, -0.003976027, 0.002481107, 0.0039814105, 0.99998975, -0.0021686584, -0.0024724589, 0.0021785132, 0.9999946, 1.7878886, 0.5139611, 2.2461324)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1847983049]
+
+[node name="Arma" type="Node3D" parent="." unique_id=2012619649]
+script = ExtResource("1_6ba58")
+bb_scene = ExtResource("2_lgngo")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Arma" unique_id=437999825]
+mesh = SubResource("BoxMesh_xwo6f")
+
+[node name="BocaDoCano" type="Marker3D" parent="Arma" unique_id=172811266]
+transform = Transform3D(1, 0, 0, 0, 0.9999999, 0, 0, 0, 0.99999994, 0.015432954, 0.003425479, -4.1016207)
